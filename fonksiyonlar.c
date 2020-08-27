@@ -132,6 +132,31 @@ int all_functions() {
     ket = strxfrm (cdizi255, cdizi155, 5); //(çevrilen deðerin koyulacaðý yer, çevrilecek deðer, çevrilecek deðer sayýsý)
     cdizi255[5]='\0'; //dizinin 5. deðerini boþalt demek
     printf("Ilk karakter dizisi: %s, cevrilen karakter sayisi: %d\n", cdizi155, ket); //çýktý = Ilk karakter dizisi: Bilgisayar, cevrilen karakter sayisi: 10
-    printf("Elde edilen yeni karakter dizisi: %s", cdizi255); //çýktý = Elde edilen yeni karakter dizisi: Bilgi
+    printf("Elde edilen yeni karakter dizisi: %s\n\n", cdizi255); //çýktý = Elde edilen yeni karakter dizisi: Bilgi
+    //---------------------------
+    
+    //-----getchar & putchar-----
+    char hd;
+    printf("Bir karakter giriniz: ");
+    hd = getchar(); //Yazýlan karakteri okur.
+    printf("Girilen karakter: \n\n");
+    putchar(hd); //Yazýlan karakteri gösterir.
+    //---------------------------
+    
+    //--------gets & puts--------
+    char cdizi55[40];
+    printf("Bir karakter dizisi giriniz: ");
+    gets(cdizi55); //Yazýlan karakteri okur.
+    printf("Girdiginiz karakter dizisi: \n\n");
+    puts(cdizi55); //Yazýlan karakteri gösterir.
+    //---------------------------
+    
+    //----------sprintf----------
+    int id = 36;
+    float kd = 121.45;
+    char cdizi99[] = "C Programlama Dili";
+    char buffer[100];
+    sprintf(buffer, "%d %.2f %s\n", id, kd, cdizi99); //(3. bölümdeki bütün deðeri alacak deðer, 3. bölümdeki deðeri yazan yer, 1. bölüme deðerlerin aktarýlýp, 2. bölmede yazýlacak olan deðerler)
+    printf("\n\nOlusturulan karakter dizisi: %s\n\n", buffer);
     //---------------------------
 }
